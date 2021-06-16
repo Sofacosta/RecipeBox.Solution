@@ -2,6 +2,17 @@
   Layout = "_Layout";
 }
 
-<h1>Welcome to the To Do List!</h1>
-<p>@Html.ActionLink("See all recipes", "Index", "Recipes")</p> <p>@Html.ActionLink("See all categories", "Index", "Categories")</p>
-<p>@Html.ActionLink("Create an account", "Index", "Account")</p>
+@using RecipeBox.Models
+
+<div class="home">
+  <h1>Recipe Box Manager</h1>
+  <h4>Keeping track of your favorite recipes</h4>
+  <hr>
+  <div class="controls flex-center">
+    <input type="button" class="btn btn-info" value="Food Categories" onclick="location.href='@Url.Action("Index", "Categories")'" />
+    @* <p>@Html.ActionLink("See all recipes", "Index", "Recipes")</p> <p>@Html.ActionLink("See all categories", "Index", "Categories")</p> *@
+    <input type="button" class="btn btn-success" value="Create an account" onclick="location.href='@Url.Action("Index", "Account")'" />
+    @* <p>@Html.ActionLink("Create an account", "Index", "Account")</p> *@
+    </div>
+</div>    
+
